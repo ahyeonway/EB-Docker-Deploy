@@ -26,9 +26,11 @@ secrets = json.load(open(os.path.join(SECRETS_DIR, 'base.json')))
 
 SECRET_KEY = secrets['SECRET_KEY']
 
-# Application definition
+AUTH_USER_MODEL = 'members.User'
 
+# Application definition
 INSTALLED_APPS = [
+    'members',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
